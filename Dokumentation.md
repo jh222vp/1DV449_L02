@@ -88,7 +88,7 @@ Bootstrap.js - Size 66.0kb - Time/Latency 164ms/42ms.
 ###Messy
 Här är orginalkoden långsammare, verkar som om det försöks läsas in ett js-script som inte existerar och detta tar tid.
 
-#Observation (laddningstid, storlekar av resurser, anrop m.m.) efter åtgärd (utan webläsar-cache - gärna ett medeltal av ett antal testningar)
+###Observation (laddningstid, storlekar av resurser, anrop m.m.) efter åtgärd (utan webläsar-cache - gärna ett medeltal av ett antal testningar)
 Index.php - Size: 1.1kb - Time/Latency 30ms/31ms.
 bootstrap.min.css - maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css - Size: 23,8KB
 LoginStyle.css - Size: 1.2KB.
