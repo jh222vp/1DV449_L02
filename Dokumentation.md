@@ -62,30 +62,30 @@ Det fanns ingen riktigt utloggning utan endast en "redirect". Ser nu till att d�
 
 #Del 2 - Optimering
 
-###Namn på åtgärd Du gjort för att försöka förbättra prestandan
+##Namn på åtgärd Du gjort för att försöka förbättra prestandan
 
-#Styling i HTML flyttad till egen css
+###Styling i HTML flyttad till egen css
 Flyttade ut css som låg i bland annat index.php och mess.php till en egen fil.
 Detta för att filen har möjlighet att bl.a cachas vilket kan optimera laddningstiderna vid publicering i molnet.
 Det går även långsammare att ladda sidan om man har det på detta sätt.
 
-#Script-taggar placerade längst ner i "body"
+###Script-taggar placerade längst ner i "body"
 
 Genom att placera scrip-taggarna längst ner på sidan så laddas sidan in först och man behöver inte vänta på något grafikt
 medan de andra scripten laddas in. Detta gör att användaren kan uppleva det som snabbare då "något händer" även om det
 är samma filer och tid totalt sett.
 
-#Minifiering med JQUERY och bootstrap
+###Minifiering med JQUERY och bootstrap
 Här har jag valt att länka till minifierade filerna av jquery och bootstrap.
 Vid minifiering tas allt onödigt bort vilket leder till mindre filer och det går då snabbare att ladda in och läsa filerna.
 
 
-#Observation (laddningstid, storlekar av resurser, anrop m.m.) innan åtgård (utan webläsar-cache - gärna ett medeltal av ett antal testningar)
+###Observation (laddningstid, storlekar av resurser, anrop m.m.) innan åtgård (utan webläsar-cache - gärna ett medeltal av ett antal testningar)
 Index.php - Size: 1.1kb - Time/Latency 38ms/37ms.
 Bootstrap.css - Size 124kb - Time/Latency 195ms/35ms.
 Bootstrap.js - Size 66.0kb - Time/Latency 164ms/42ms.
 
-##Messy
+###Messy
 Här är orginalkoden långsammare, verkar som om det försöks läsas in ett js-script som inte existerar och detta tar tid.
 
 #Observation (laddningstid, storlekar av resurser, anrop m.m.) efter åtgärd (utan webläsar-cache - gärna ett medeltal av ett antal testningar)
@@ -93,7 +93,7 @@ Index.php - Size: 1.1kb - Time/Latency 30ms/31ms.
 bootstrap.min.css - maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css - Size: 23,8KB
 LoginStyle.css - Size: 1.2KB.
 
-##Messy
+###Messy
 Här är den modifierade koden snabbare, sparar ca 200ms tack vare optimeringen. Så från ca 1sek till 800ms mellan orignal
 koden och den modifierade.
 
